@@ -1,7 +1,7 @@
 # Fitness-Web
 
-Pertama dowload sample sql terlebih dahulu
-Link download sql :
+Pertama dowload sample sql terlebih dahulu,
++ Link download sql : https://drive.google.com/file/d/1ElRAUK2KgYA25LKNUc_XqpdX-Ldi84k1/view
 
 - Import sql sample ke phpmyadmin, dengan membuat database baru terlebih dahulu bernama db_fitnessapp
 - Clone repository ini (Fitness-Web) ke file htdocs xampp
