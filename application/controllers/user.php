@@ -10,9 +10,16 @@ class user extends CI_Controller
       redirect('/auth/login','refresh'); //redirect ke page login
     }
   }
-  public function profile()
+  public function home(){
+    $this->load->view('home');
+  }
+  public function statistic()
   {
-    $this->load->view('profile');
+    $this->load->view('statistic');
+  }
+  public function schedule()
+  {
+    $this->load->view('schedule');
   }
 }
  ?>

@@ -23,5 +23,6 @@
         <input type="submit" name="register" value="Register"/>
       </div>
     </form>
+    <a href="<?php echo site_url('auth/login') ?>">Already have an account? Login here</a>
   </body>
 </html>

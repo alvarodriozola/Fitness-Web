@@ -28,7 +28,7 @@ class Auth extends CI_Controller
           $_SESSION['user_logged'] = TRUE;
           $_SESSION['email'] = $email;
 
-          redirect('/user/profile','refresh'); //redirect ke page dashboard
+          redirect('/user/home','refresh'); //redirect ke page dashboard
         }else{
           echo "Username atau password salah !";
            //redirect ke page login
