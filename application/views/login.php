@@ -7,6 +7,7 @@
   <body>
     <h1>Login</h1>
     <?php echo validation_errors(); ?>
+    <p id="error"></p>
     <form method="post">
       <div class="form">
         <input type="text" name="email" id="email" placeholder="Email"/><br>
