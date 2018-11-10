@@ -5,7 +5,7 @@ Pertama dowload sample sql terlebih dahulu,
 
 - Import sql sample ke phpmyadmin, dengan membuat database baru terlebih dahulu bernama db_fitnessapp
 - Clone repository ini (Fitness-Web) ke file htdocs xampp
-- Setting phpmyadmin pada folder FitnessApp/application/config/ edit file database.php, cari $db['default']
+- Setting phpmyadmin pada folder Fitness-Web/application/config/ edit file database.php, cari $db['default']
   ganti settingan, sesuaikan (username phpmyadmin/password/dll)
 ========================================================================
 - Akses page REGISTER -> localhost/FitnessApp/index.php/auth/register
