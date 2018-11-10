@@ -8,11 +8,12 @@ Pertama dowload sample sql terlebih dahulu,
 - Setting phpmyadmin pada folder Fitness-Web/application/config/ edit file database.php, cari $db['default']
   ganti settingan, sesuaikan (username phpmyadmin/password/dll)
 ========================================================================
-- Akses page REGISTER -> localhost/FitnessApp/index.php/auth/register
-- Akses page LOGIN -> localhost/FitnessApp/index.php/auth/login
-- Akses page PROFILE -> localhost/FitnessApp/index.php/user/profile
+- Akses page REGISTER -> localhost/FitnessWeb/index.php/auth/register
+- Akses page LOGIN -> localhost/FitnessWeb/index.php/auth/login
+- Akses page PROFILE -> localhost/FitnessWeb/index.php/user/profile
+- Akses LANDING PAGE -> localhost/FitnessWeb
 ========================================================================
-- File coding View -> direktori application/views (login, profile, register)
+- File coding View -> direktori application/views (login, profile, register, landingPage)
 - File coding Model -> direktori application/models (Auth_model)
 - File coding Controller -> direktori application/controllers (Auth)
 
