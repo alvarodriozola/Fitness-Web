@@ -3,6 +3,10 @@ class Auth extends CI_Controller
 {
   public function __construct(){
 		parent::__construct();
+    //mengatur authorize page user jika sudah/belum login
+    if($this->session->userdata('user_logged')){
+      redirect('/user/home','refresh'); //redirect ke page login
+    }
 		$this->load->model('Auth_model');
 	}
   public function login()
