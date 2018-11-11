@@ -18,5 +18,7 @@
         </ul>
       </nav>
     </header>
+    <h3>Workout Plan</h3>
+    <h3>Current Workout</h3>
   </body>
 </html>

@@ -17,5 +17,9 @@
         </ul>
       </nav>
     </header>
+    <h3>Edit Profile</h3>
+    <a href="#"></a>
+    <h3>Weight</h3>
+    <h3>BMI</h3>
   </body>
 </html>
