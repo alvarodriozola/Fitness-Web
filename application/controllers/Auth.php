@@ -3,9 +3,8 @@ class Auth extends CI_Controller
 {
   public function __construct(){
 		parent::__construct();
-    //mengatur authorize page user jika sudah/belum login
     if($this->session->userdata('user_logged')){
-      redirect('/user/home','refresh'); //redirect ke page login
+      redirect('/user/home'); //redirect ke page login
     }
 		$this->load->model('Auth_model');
 	}
@@ -29,8 +28,8 @@ class Auth extends CI_Controller
           echo "Berhasil Login";
 
           //set session sudah Login
-          $_SESSION['user_logged'] = TRUE;
-          $_SESSION['email'] = $email;
+          $this->session->set_userdata('user_logged',true);
+          $this->session->set_userdata('email',$email);
 
           redirect('/user/home','refresh'); //redirect ke page dashboard
         }else{
@@ -73,14 +72,6 @@ class Auth extends CI_Controller
     }
     //load view page register
     $this->load->view('register');
-  }
-
-  public function logout(){
-    //untuk redirect
-    $this->load->helper('url');
-
-    $this->session->sess_destroy();
-    redirect('/auth/login','refresh'); //redirect ke page login
   }
 }
  ?>

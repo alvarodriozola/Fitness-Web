@@ -13,7 +13,7 @@
           <li><a href="<?php echo site_url('user/home') ?>" class="btnHome">Home</a></li>
           <li><a href="<?php echo site_url('user/schedule') ?>" class="btnSchedule">Schedule</a></li>
           <li><a href="<?php echo site_url('user/statistic') ?>" class="btnStatistic">Statistic</a></li>
-          <li><a href="<?php echo site_url('auth/logout') ?>" class="btnLogout">Logout</a></li>
+          <li><a href="<?php echo site_url('user/logout') ?>" class="btnLogout">Logout</a></li>
         </ul>
       </nav>
     </header>

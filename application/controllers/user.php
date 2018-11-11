@@ -21,5 +21,12 @@ class user extends CI_Controller
   {
     $this->load->view('schedule');
   }
+  public function logout(){
+    //untuk redirect
+    $this->load->helper('url');
+    $this->session->unset_userdata('user_logged');
+    $this->session->sess_destroy();
+    redirect('/auth/login','refresh'); //redirect ke page login
+  }
 }
  ?>
