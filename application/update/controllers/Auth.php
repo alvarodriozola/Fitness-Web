@@ -21,11 +21,10 @@ class Auth extends CI_Controller
         $where = array('email'=>$email, 'password'=>$password);
 
         //cek data login lewat model
-        $check = $this->Auth_model->check_login("users",$where)->num_rows();
+        $check = $this->Auth_model->check_login("user",$where)->num_rows();
 
         //jika user ada di database
         if($check > 0){
-          echo "Berhasil Login";
 
           //set session sudah Login
           $this->session->set_userdata('user_logged',true);
@@ -33,7 +32,6 @@ class Auth extends CI_Controller
 
           redirect('/user/home','refresh'); //redirect ke page dashboard
         }else{
-          echo "Username atau password salah !";
            //redirect ke page login
            redirect('/auth/login','refresh'); //redirect ke page login
         }
@@ -48,20 +46,18 @@ class Auth extends CI_Controller
 
     //jika klik submit register
     if($this->input->post('register')){
-      $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[users.email]');
-      $this->form_validation->set_rules('names', 'Name', 'trim|required');
-      $this->form_validation->set_rules('gender', 'Gender', 'required');
-      $this->form_validation->set_rules('bdate', 'Birth Date', 'required');
+      $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.email]');
+      $this->form_validation->set_rules('fname', 'First Name', 'trim|required');
+      $this->form_validation->set_rules('lname', 'Last Name', 'trim|required');
       $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]');
-      $this->form_validation->set_rules('password2', 'Re-enter Password', 'trim|required|min_length[5]|matches[password]');
+      $this->form_validation->set_rules('repassword', 'Re-enter Password', 'trim|required|min_length[5]|matches[password]');
       if($this->form_validation->run() == TRUE){
         //add ke database
         $data = array(
           'email'=>$_POST['email'],
-          'name'=>$_POST['names'],
-          'password'=>md5($_POST['password']),
-          'gender'=>$_POST['gender'],
-          'dateofbirth'=>$_POST['bdate']
+          'nama_depan'=>$_POST['fname'],
+          'nama_belakang'=>$_POST['lname'],
+          'password'=>md5($_POST['password'])
         );
         //insert data ke tabel users lewat model
         $this->Auth_model->register($data);

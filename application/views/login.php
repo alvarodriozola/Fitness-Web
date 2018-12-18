@@ -1,19 +1,54 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
+    <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
-    <?php echo validation_errors(); ?>
-    <p id="error"></p>
-    <form method="post">
-      <div class="form">
-        <input type="text" name="email" id="email" placeholder="Email"/><br>
-        <input type="password" name="password" id="password" placeholder="Password"/><br>
-        <input type="submit" name="login" value="Login"/>
+    <!-- Container -->
+      <section class="section mt-5">
+      <div class="container">
+        <div class="row justify-content-md-center shadow-style">
+            <div class="col-md-5 col-md-auto text-center login-box">
+                <a href="<?php echo base_url()?>"><img src="<?php echo base_url('image/icon.png');?>" width="72" height="72" alt="Fitnes Web" class="mb-3"></a>
+                <h1 class="text-center color-blue font-weight-light">Login</h1>
+                <?php if($this->session->flashdata('success_register') != ''){
+                  echo '<div class="alert alert-success">'.$this->session->flashdata('success_register').'</div>';
+                }else if($this->session->flashdata('success_login') != ''){
+                  echo '<div class="alert alert-success">'.$this->session->flashdata('success_login').'</div>';
+                }else if($this->session->flashdata('failed_login') != ''){
+                  echo '<div class="alert alert-danger">'.$this->session->flashdata('failed_login').'</div>';
+                } ?>
+                <form method="post">
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <input type="text" id="email" name="email" class="form-control form-control-lg flat-input" placeholder="Email">
+                            <?php echo form_error('email'); ?>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="password" id="password" name="password" class="form-control form-control-lg flat-input" placeholder="Password">
+                            <?php echo form_error('password'); ?>
+                        </div>
+                        <button type="submit" class="mt-4 btn btn-lg btn-block btn-style" value="Login" name="login">Login</button>
+                        <a href="<?php echo site_url('auth_controller/register') ?>" class="mt-3 text-center col color-blue">Didn't have account? Register</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7 bg_login">
+                <img class="img-fluid" src="<?php echo base_url('image/loginBg.png');?>" alt=""/>
+            </div>
+        </div>
       </div>
-    </form>
+        </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>

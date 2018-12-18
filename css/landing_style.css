@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Myriad+Pro);
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    padding: 2%;
+    font-family: "Myriad Pro Regular";   
+}
+
+.container {
+    margin-left: 2% !important;
+}
+
+.landingBg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width:100%;
+    max-height:90%;
+    z-index: -1;   
+}
+
+.navbar-brand img {
+    margin-left: 2%;
+}
+
+.btnLogin, btnLogin:hover{
+    color: #2CAFE9;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    width: 105px;
+    height: 33px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.btnLogin a, a:hover{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.btnReg, btnReg:hover {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    font-size: 14px;
+    width: 105px;
+    height: 33px;
+    text-align: center;
+}
+
+.btnReg a, btnReg a:hover{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.webDetail {
+    margin-top: 150px;
+    color: #4e4e4e
+}
+
+.webDetail h1 {
+    font-size: 72px;    
+}
+
+.webDetail p {
+    font-size: 24px;
+}
+
+.btn-getStarted {
+    border-radius: 0;
+    width: 200px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to top right, #BFFFFF, #2CAFE9);;
+    color: #FFF;
+    -webkit-transition: all 0.8%;
+    transition: all 0.8%;
+}
+
+.btn-noHovWh a:hover{
+    color: #fff;
+}
+

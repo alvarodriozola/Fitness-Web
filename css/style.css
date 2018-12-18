@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Myriad+Pro);
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    background: #fff;
+    font-family: 'Myriad Pro';
+}
+
+.color-blue {
+    color: #2CAFE9;
+}
+
+.shadow-style {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login-box {
+    background: #fff;
+    padding: 50px;
+}
+
+.flat-input {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #2CAFE9;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #2CAFE9 4%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #2CAFE9 4%);
+    background-position: -500px 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.flat-input:focus {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+    border-bottom: 0px;
+}
+
+.flat-color {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-style {
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to top right, #BFFFFF, #2CAFE9);;
+    color: #FFF;
+    -webkit-transition: all 0.8%;
+    transition: all 0.8%;
+}
+
+.btn-stylenohv {
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to top right, #BFFFFF, #2CAFE9);;
+    color: #FFF;
+    -webkit-transition: all 0.8%;
+    transition: all 0.8%;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2CAFE9;
+}
+
+.btn-style:hover {
+    background: transparent;
+    border: 2px solid #2CAFE9;
+    color: #2CAFE9;
+}
+
+.bg_login {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg_login img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.bmiCount {
+    border-radius: 10px;
+    padding: 10px;
+}
