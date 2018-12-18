@@ -1,19 +1,8 @@
 # Fitness-Web
+My website project #Fitness_Web
 
-Pertama dowload sample sql terlebih dahulu,
-+ Link download sql : https://drive.google.com/file/d/1ElRAUK2KgYA25LKNUc_XqpdX-Ldi84k1/view
+Version : final
+Framework : CodeIgniter
++ SQL File : https://drive.google.com/open?id=1Y_vXPPsl-zlLgesHCoA42EaxPDbRNGsv
 
-- Import sql sample ke phpmyadmin, dengan membuat database baru terlebih dahulu bernama db_fitnessapp
-- Clone repository ini (Fitness-Web) ke file htdocs xampp
-- Setting phpmyadmin pada folder Fitness-Web/application/config/ edit file database.php, cari $db['default']
-  ganti settingan, sesuaikan (username phpmyadmin/password/dll)
-========================================================================
-- Akses page REGISTER -> localhost/FitnessWeb/index.php/auth/register
-- Akses page LOGIN -> localhost/FitnessWeb/index.php/auth/login
-- Akses page PROFILE -> localhost/FitnessWeb/index.php/user/profile
-- Akses LANDING PAGE -> localhost/FitnessWeb
-========================================================================
-- File coding View -> direktori application/views (login, profile, register, landingPage)
-- File coding Model -> direktori application/models (Auth_model)
-- File coding Controller -> direktori application/controllers (Auth)
 
